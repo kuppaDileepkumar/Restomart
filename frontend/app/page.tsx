@@ -37,8 +37,8 @@ export default function TasksPage() {
 
     try {
       const url = isEditing
-        ? `http://localhost:4000/api/tasks/${editingTaskId}`
-        : 'http://localhost:4000/api/tasks'
+        ? `https://restomart-hcc5.onrender.com/api/tasks/${editingTaskId}`
+        : 'https://restomart-hcc5.onrender.com/api/tasks'
       const method = isEditing ? 'PUT' : 'POST'
 
       const res = await fetch(url, {
@@ -58,7 +58,7 @@ export default function TasksPage() {
 
   const deleteTask = async (id: string) => {
     if (!confirm('Are you sure?')) return
-    await fetch(`http://localhost:4000/api/tasks/${id}`, { method: 'DELETE' })
+    await fetch(`https://restomart-hcc5.onrender.com/api/tasks/${id}`, { method: 'DELETE' })
     getAllTasks()
   }
 
