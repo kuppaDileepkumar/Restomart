@@ -3,8 +3,9 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  UpdateDateColumn,
-} from 'typeorm'
+  UpdateDateColumn
+} from 'typeorm';
+
 
 export enum TaskStatus {
   TODO = 'todo',
