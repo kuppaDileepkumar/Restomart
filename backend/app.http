@@ -1,0 +1,29 @@
+### Get all tasks
+GET http://localhost:4000/api/tasks
+Content-Type: application/json
+
+
+### Create Task
+POST http://localhost:4000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Test Task",
+  "description": "Test POST endpoint",
+  "status": "in_progress",
+  "dueDate": "2025-06-30"
+}
+
+
+### Update a task (replace <task_id> with actual UUID)
+PUT http://localhost:4000/api/tasks/9123a0c1-24b4-4d22-bfdd-b88fedc2a9f9
+Content-Type: application/json
+
+{
+  "title": "Learn Express + TypeORM",
+  "status": "in_progress"
+}
+
+
+### Delete a task (replace <task_id> with actual UUID)
+DELETE http://localhost:3000/api/tasks/
