@@ -22,7 +22,7 @@ export default function TasksPage() {
 
   const getAllTasks = async () => {
     try {
-      const res = await fetch('http://localhost:4000/api/tasks')
+      const res = await fetch('https://restomart-hcc5.onrender.com/api/tasks')
       const data = await res.json()
       setTasks(data)
     } catch (err) {
